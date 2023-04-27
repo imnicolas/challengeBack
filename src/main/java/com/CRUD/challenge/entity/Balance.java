@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.Date;
 
 @Entity
 public class Balance {
@@ -13,12 +12,12 @@ public class Balance {
     private int id;
 
     private double valor;
-    private Date fecha;
+    private String fecha;
 
     public Balance() {
     }
 
-    public Balance(int id, double valor, Date fecha) {
+    public Balance(int id, double valor, String fecha) {
         this.id = id;
         this.valor = valor;
         this.fecha = fecha;
@@ -40,11 +39,11 @@ public class Balance {
         this.valor = valor;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 }
