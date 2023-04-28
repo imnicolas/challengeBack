@@ -22,4 +22,9 @@ public class TarjetaController {
     public List<Tarjeta> getTarjeta() {
         return tarjetaService.findTarjeta();
     }
+
+    @GetMapping(path = {"traer/tarjeta/{id}"})
+    public Tarjeta getTarjetaById(@PathVariable ("id") int id ) {
+        return tarjetaService.findTarjetaById(id);
+    }
 }

@@ -12,9 +12,14 @@ import java.util.Optional;
 public class BalanceService {
     @Autowired
     BalanceRepository balanceRepository;
+
     public List<Balance> findBalance() {
         List<Balance> balance = balanceRepository.findAll();
         return balance;
+    }
+
+    public Balance findBalanceById(int id) {
+        return balanceRepository.findById(id).orElse(null);
     }
 
 }

@@ -19,9 +19,13 @@ public class BalanceController {
     BalanceService balanceService;
 
     @GetMapping(path = {"traer/balances"})
-    public List<Balance> getBalanceById() {
+    public List<Balance> getBalances() {
         return balanceService.findBalance();
     }
 
+    @GetMapping(path = {"traer/balance/{id}"})
+    public Balance getBalanceById(@PathVariable ("id") int id ) {
+        return balanceService.findBalanceById(id);
+    }
 
 }

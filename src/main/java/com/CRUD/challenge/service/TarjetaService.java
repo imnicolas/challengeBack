@@ -17,4 +17,7 @@ public class TarjetaService {
         List<Tarjeta> tarjeta = tarjetaRepository.findAll();
         return tarjeta;
     }
+    public Tarjeta findTarjetaById(int id) {
+        return tarjetaRepository.findById(id).orElse(null);
+    }
 }
